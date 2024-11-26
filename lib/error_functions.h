@@ -1,6 +1,7 @@
 #ifndef ERROR_FUNCTIONS_H
 #define ERROR_FUNCTIONS_H
 
+
 /*Function prints the error text corre
 sponding to the current value of errno*/
 void errMsg(const char *format, ...);
@@ -39,4 +40,4 @@ void usageErr(const char *format, ...) NORETURN;
  errors in the command-line arguments specified to a program.*/
 void cmdLineErr(const char *format, ...) NORETURN;
 
-#endif;
+#endif

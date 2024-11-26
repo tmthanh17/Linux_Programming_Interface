@@ -2,6 +2,7 @@
 #include "error_functions.h"
 #include "tlpi_hdr.h"
 //#include "ename.c.inc"
+//#include 
 static char *ename[] = {
 	/*   0 */ "",
     /*   1 */ "EPERM", "ENOENT", "ESRCH", "EINTR", "EIO", "ENXIO", "E2BIG",
@@ -107,13 +108,14 @@ void err_exit(const char *format, ...)
 
 void errExitEN(int errnum, const char *format, ...)
 {
-	va_list arglist;
-	
+	va_list argList;
+
 	va_start(argList,format);
 	outputError(TRUE, errnum, TRUE, format, argList);
 	va_end(argList);
 
 	terminate(TRUE);
+
 }
 
 void fatal(const char *format, ...)
@@ -121,7 +123,7 @@ void fatal(const char *format, ...)
 	va_list argList;
 	 
 	va_start(argList, format);
-	outptError(FALSE, 0, TRUE, format, argList);
+	outputError(FALSE, 0, TRUE, format, argList);
 	va_end(argList);
 
 	terminate(TRUE);
