@@ -1,4 +1,4 @@
-SUBDIRS := lib procexec
+SUBDIRS := lib procexec threads
 
 # Default target to build all subdirectories
 all: $(SUBDIRS)

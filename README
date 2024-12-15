@@ -1,1 +1,7 @@
 This code for book "The Linux Programming Interface"
+Step 1:
+    make build_lib LIB_DIR=lib
+Step 2:
+    make build_program DIR=directory MAIN=file.c LIB_DIR=../lib
+
+    Ex: make build_program DIR=threads MAIN=thread_incr.c  LIB_DIR=../lib
