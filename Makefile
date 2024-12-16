@@ -1,4 +1,4 @@
-SUBDIRS := lib procexec threads
+SUBDIRS := lib procexec threads fileio
 
 # Default target to build all subdirectories
 all: $(SUBDIRS)
